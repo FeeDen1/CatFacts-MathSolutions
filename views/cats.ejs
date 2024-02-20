@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs') %>
+
+<main>
+    <form action="/cats" method="post">
+        <button type="submit">Факт о котиках</button>
+    </form>
+    <div>
+        <% if(locals.imageOfCat){ %>
+        <img src="<%= imageOfCat %>" width="500px" height="400px">
+        <% } %>
+    </div>
+    <p><%= catFact %></p>
+</main>
+<%- include('partials/footer.ejs') %>

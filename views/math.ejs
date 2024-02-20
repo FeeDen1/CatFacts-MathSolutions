@@ -1,0 +1,34 @@
+<%- include('partials/header.ejs') %>
+
+<main>
+    <form action="/math" method="post">
+        <select name="operation" required="required">
+            <option value="">Выберите значение</option>
+            <option value="simplify">Решить</option>
+            <option value="factor">Упростить</option>
+            <option value="integrate">Интеграл</option>
+            <option value="zeroes">Найти корни</option>
+            <option value="tangent">Касательная</option>
+            <option value="area">Расстояние функции</option>
+            <option value="cos">Косинус</option>
+            <option value="sin">Синус</option>
+            <option value="tan">Тангенс</option>
+            <option value="arccos">Арккосинус</option>
+            <option value="arcsin">Арксинус</option>
+            <option value="arctan">Арктангенс</option>
+            <option value="abs">Модуль</option>
+            <option value="log">Логарифм</option>
+        </select>
+        <input type="text" name="calc" value="" required>
+        <button type="submit">Решить</button>
+        <% if(locals.data === 'NaN'){ %>
+            <p>Введите данные корректно</p>
+        <% } else { %>
+            <p> <%= data %></p>
+            <p> <%= fact %></p>
+        <% } %>
+    </form>
+
+</main>
+
+<%- include('partials/footer.ejs') %>

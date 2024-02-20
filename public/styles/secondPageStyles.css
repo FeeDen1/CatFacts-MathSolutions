@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: #FFF3DA;
+    padding: 5px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar_list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar_item {
+    margin: 0 15px;
+}
+
+.navbar_link-math,
+.navbar_link-cats {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar_link-math:hover,
+.navbar_link-cats:hover {
+    color: #9F91CC;
+    transition: color 0.3s;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+/* Стили для выпадающего списка */
+select, input {
+    padding: 8px;
+    margin: 5px;
+}
+
+/* Стили для кнопки */
+button {
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* При наведении на кнопку */
+button:hover {
+    background-color: #ff6600;
+}
+
+/* Стили для абзацев */
+p {
+    margin: 5px;
+    color: #333;
+}
+
+/* Стили для сообщения об ошибке */
+p.error {
+    color: #ff0000;
+}
